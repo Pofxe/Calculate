@@ -1,0 +1,54 @@
+﻿<Window x:Class="CalculatorApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="400" Width="400">
+    <Grid x:Name="Main" Background="WhiteSmoke"
+          >
+
+                                                        <!--Создаем поле с ячейками 4х6-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+                                              <!--Создаем текстовые блоки для вывода информации о вычислениях-->
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" Margin="10,32,10,10" FontSize="16" x:Name="CurrentResult"/>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" Margin="10,10,10,32" FontSize="16" x:Name="PastResult"/>
+
+                                                        <!--Создаём кнопки с цифрами от 1 до 9-->
+        <Button Grid.Row="4" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="0">1</Button>
+        <Button Grid.Row="4" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="1">2</Button>
+        <Button Grid.Row="4" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="2">3</Button>
+        <Button Grid.Row="3" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="0">4</Button>
+        <Button Grid.Row="3" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="1">5</Button>
+        <Button Grid.Row="3" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="2">6</Button>
+        <Button Grid.Row="2" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="0">7</Button>
+        <Button Grid.Row="2" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="1">8</Button>
+        <Button Grid.Row="2" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="2">9</Button>
+        <Button Grid.Row="5" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="0" Grid.ColumnSpan="2">0</Button>
+
+                                        <!--Дальше создаём необходимые кнопки для вычислений и работы с введенными данными-->
+        <Button Grid.Row="5" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="2">.</Button>
+
+        <Button Grid.Row="4" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="3">+</Button>
+        <Button Grid.Row="3" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="3">-</Button>
+        <Button Grid.Row="2" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="3">*</Button>
+        <Button Grid.Row="1" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="3">/</Button>
+        <Button Grid.Row="1" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="2">%</Button>
+
+        <Button Grid.Row="5" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="3">=</Button>
+        <Button Grid.Row="1" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="0">AC</Button>
+        <Button Grid.Row="1" Background="Orange" Foreground="Black" FontSize="24" BorderBrush="Black" Grid.Column="1">C</Button>
+    </Grid>
+</Window>
